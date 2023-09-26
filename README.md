@@ -1,6 +1,6 @@
 # expand-storage
 
-Por supuesto, desglosemos el script en detalle:
+Este es el detalle del script:
 
 ```bash
 #!/bin/bash
