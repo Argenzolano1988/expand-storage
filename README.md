@@ -1,4 +1,4 @@
-# expand-storage
+# Expand-Storage
 
 Este es el detalle del script:
 
