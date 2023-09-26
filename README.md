@@ -70,5 +70,21 @@ fi
 
 - `echo "El uso del LV está por debajo del límite. No se requiere expansión."`: Muestra un mensaje si el uso del volumen está por debajo del límite y no se requiere expansión.
 
+Puedes agregar este crontab para que lo programes cada hora, asi evalua constantemente el estado del disco y lo aumenta de inmediato. 
+
+```bash
+echo "0 * * * * /ruta/al/expand-storage.sh" >> mi_crontab
+```
+Luego, carga el archivo mi_crontab en el crontab del usuario utilizando el comando crontab:
+
+```bash
+crontab mi_crontab
+```
+
+Puedes verificar que la tarea se haya agregado correctamente ejecutando:
+```bash
+crontab -l
+```
+
 En resumen, este script Bash monitorea el uso de un volumen lógico, compara el uso con un límite establecido y, si el uso supera el límite, expande automáticamente el volumen lógico y el sistema de archivos. Este enfoque permite gestionar eficientemente el espacio en disco según sea necesario.
 
